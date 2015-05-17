@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name          = 'slackApiWrapper'
-    ,version      = '0.1'
+    ,version      = '0.1.1'
     ,description  = 'This is Wrapper of Slack APIs.'
     ,license      = 'MIT'
     ,author       = 'Takeru Ichii'

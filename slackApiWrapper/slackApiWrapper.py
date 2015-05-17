@@ -19,7 +19,7 @@ class slackApiWrapper:
 		except:
 			pass
 		responce = requests.post(api_url ,params = header)
-		return responce
+		return json.loads(responce.text)
 
 def main():
 	argument_parser = argparse.ArgumentParser(description='This is Wrapper of Slack APIs.')
@@ -29,7 +29,7 @@ def main():
 	args = vars(argument_parser.parse_args())
 	slack_client = slackApiWrapper(args['token'])
 	send_result = slack_client.send(args['api'], json.loads(args['arg']))
-	return send_result.text
+	return json.dumps(send_result)
 
 if __name__ == '__main__':
 	print(main())
