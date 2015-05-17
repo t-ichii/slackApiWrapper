@@ -34,9 +34,9 @@ import slackApiWrapper
 slack_token = 'xxxx-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxx-xxxxxx'
 api_name = 'api.test'
 arg = {'foo' : 'test'}
-slack_client = slackApiWrapper(slack_token)
+slack_client = slackApiWrapper.slackApiWrapper(slack_token)
 send_result = slack_client.send(api_name, arg)
-print(send_result.text)
+print(send_result)
 ```
 
 
